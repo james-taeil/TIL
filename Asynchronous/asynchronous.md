@@ -181,8 +181,6 @@ printAsynchronous(() => console.log('async callback'), 2000);
 // b
 // async callback
 ```
-
-
 ---
 ### **underbar**
 직접 구현해보는 프로젝트를 했다.
