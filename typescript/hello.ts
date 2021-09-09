@@ -14,6 +14,9 @@ let arr2: Array<number> = [1,2,3];
 //문자열 배열
 let arr3: string[] = ['a', 'b', 'c'];
 
+// 객체
+let obj: object = {name : 'test', age: 13};
+
 
 // 튜플
 let b: [string, number];
