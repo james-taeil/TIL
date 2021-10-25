@@ -1,7 +1,11 @@
+// let helloworld: string = 'hello world';
+
+// let helloworld = 'hello world';
+// car = 3; // error
+
 // 문자열
 let car: string = 'bmw';
 
-// car = 3; // error
 
 // 숫자
 let age: number = 30;
@@ -28,6 +32,11 @@ b[0].toLowerCase();
 
 
 // void, never => void: 아무것도 반환하지 않을 때 || never: 에러 반환하거나 무한루프일 경우
+const test = () => {
+    let hi: string = 'hi';
+    return hi;
+}
+
 const test1 = (): void => {
     console.log('test');
 }
@@ -72,4 +81,5 @@ myOs = Os.Android;
 // null, undefined
 let nullTest:null = null;
 let undefinedTest:undefined = undefined;
+
 
