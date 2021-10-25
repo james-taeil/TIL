@@ -19,6 +19,8 @@ node도 여러개의 thread를 가지고 있다. 하지만 JS는 실행하는 �
 
 ### Event Loop
 ![](https://cdn.discordapp.com/attachments/900659683822555199/900659826739265536/unknown.png)
+
+&nbsp;
 node는 이벤트 기반의 플랫폼이기 때문에 이벤트가 발생할 때 미리 지정해둔 작업을 수행하는 방식으로 작동한다. 이 말은 곧 node 에서 일어나는 모든 처리는 일련의 콜백을 처리하는 것과 같다고 할 수 있다. Nods.js는 v8이라는 자바스크립트 엔진과 비동기 작업을 처리하는 libuv 라는 라이브러리로 이뤄져있다.
 
 # nodejs에서 callback을 설명해 보세요.
