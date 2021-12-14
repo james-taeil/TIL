@@ -163,15 +163,26 @@ consturctor : 언제 실행? 왜 사용?
 
 # abstract vs interface
 abstract class : 자식이 기능을 가질 때, 모든 기능을 부모에서 설정해 줄 수없으므로, 추상적으로 부모class에서 선언만 해준다 라는 느낌?
-interface class : 
+interface class : abstract class보다 추상화 정도가 높고, abstract class와 상수만 멤버로 가질 수 있다는 특징이 있다.
+
 
 차이점 : 추성화에는 상속을 가진다. vs interface에서는 has의 개념 (일부이다 느낌, 가지고 있다.)
 차를 예시로 들자면, 차마다 드라이브, 브레이크 기능은 있다. 세부적으로 다를뿐 : 추상 하지만
 인터페이스는 파츠 느낌이 강하다. 차에서 바퀴는 휠, 타이어등 계속 바꿔 낄 수 있다.
 
 # extends vs implements
-extends : 하나만...?
-implements : 다중으로... => interface
+extends : SOLID 원칙으로 하나만 하는 것을 선호한다. 부모의 메소드를 그대로 사용할 수 있으며 오버라이딩 할 필요 없이 부모에 구현되있는 것을 직접 사용 가능하다.
+implements : 하지만 다중상속을 원하는 경우가 있다. 이때를 위해 implements를 만들었다. implements의 가장 큰 특징은 이렇게 부모의 메소드를 반드시 오버라이딩해야 한다.
+```java
+public class Son implements Father, Mother{...}
+```
+
+# SOLID 원칙
+Single Responsibility Principle(단일책임원칙) : 작성된 클래스는 하나의 기능만 가지며 클래스가 제공하는 모든 서비스는 그 하나의 책임을 수행하는 데 집중되어 있어야 한다는 원칙
+Open Close Principle(개방폐쇄의 원칙) : 소프트웨어의 구성요소(컴포넌트, 클래스, 모듈, 함수)는 확장에는 열려있고, 변경에는 닫혀있어야 한다는 원리
+he Liskov Substitution Principle(리스코브 치환의 원칙) : LSP를 한마디로 한다면, “서브 타입은 언제나 기반 타입으로 교체할 수 있어야 한다.”라고 할 수 있다. 즉, 서브 타입은 언제나 기반 타입과 호환될 수 있어야 한다.
+nterface Segregation Principle(인터페이스 분리의 원칙) : 한 클래스는 자신이 사용하지 않는 인터페이스는 구현하지 말아야 한다는 원리. 즉 어떤 클래스가 다른 클래스에 종속될 때에는 가능한 최소한의 인터페이스만을 사용
+Dependency Inversion Principle(의존성역전의 원칙) : 의존 관계의 역전 Dependency Inversion 이란 구조적 디자인에서 발생하던 하위 레벨 모듈의 변경이 상위 레벨 모듈의 변경을 요구하는 위계관계를 끊는 의미의역전. 실제 사용 관계는 바뀌지 않으며, 추상을 매개로 메시지를 주고 받음으로써 관계를 최대한 느슨하게 만드는 원칙.
 
 # fw vs lib
 lib : set of function => 내가 원하는데로 사용하는 것
